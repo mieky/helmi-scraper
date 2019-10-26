@@ -1,5 +1,6 @@
 const crypto = require('crypto');
 
+// https://blog.abelotech.com/posts/calculate-checksum-hash-nodejs-javascript/
 function checksum(str, algorithm, encoding) {
   return crypto
     .createHash(algorithm || 'md5')
