@@ -4,7 +4,7 @@ function log(msg) {
   process.stderr.write(`${msg}\n`);
 }
 
-async function getMessages({
+async function scrapeMessages({
   username,
   password,
   url = 'https://tampere.helmi.fi',
@@ -72,4 +72,4 @@ async function getMessages({
   return inbox;
 }
 
-module.exports = getMessages;
+module.exports = scrapeMessages;

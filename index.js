@@ -1,4 +1,4 @@
-const getMessages = require('./src/get-messages');
+const scrapeMessages = require('./src/scrape-messages');
 
 const { HELMI_USERNAME, HELMI_PASSWORD } = process.env;
 
@@ -12,7 +12,7 @@ const puppetOptions = !!process.env.DEVTOOLS ?
   {};
 
 (async () => {
-  const inbox = await getMessages({
+  const inbox = await scrapeMessages({
     username: HELMI_USERNAME,
     password: HELMI_PASSWORD,
     url: 'https://tampere.helmi.fi',
